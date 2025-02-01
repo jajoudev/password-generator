@@ -6,6 +6,10 @@ const $lowercaseCheckbox = document.querySelector("#lowercase");
 const $numbersCheckbox = document.querySelector("#numbers");
 const $symbolsCheckbox = document.querySelector("#symbols");
 const $generateButton = document.querySelector("button[type='submit']");
+const $indicatorTooWeak = document.querySelector(".indicator-too-weak");
+const $indicatorWeek = document.querySelector(".indicator-week");
+const $indicatorMedium = document.querySelector(".indicator-medium");
+const $indicatorStrong = document.querySelector(".indicator-strong");
 
 function generatePassword(length, useUppercase, useLowercase, useNumbers, useSymbols) {
   const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -24,7 +28,6 @@ function generatePassword(length, useUppercase, useLowercase, useNumbers, useSym
     const randomIndex = Math.floor(Math.random() * character.length);
     password += character[randomIndex];
   }
-
   return password;
 }
 
